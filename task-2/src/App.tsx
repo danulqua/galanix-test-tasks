@@ -9,6 +9,7 @@ const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [openedImage, setOpenedImage] = useState<string>('');
 
+  // A "bridge" function between image from the list and modal with this image
   const onClickImage = (imgUrl: string) => {
     setOpenedImage(imgUrl);
     setShowModal(true);

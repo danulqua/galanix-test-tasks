@@ -10,6 +10,7 @@ type Props = {
 const Modal: React.FC<Props> = ({ imgUrl, isVisible, onCloseModal }) => {
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // If clicked outside the modal window - close modal
   const onClickOverlay = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === imgRef.current) return;
     onCloseModal();

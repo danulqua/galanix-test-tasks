@@ -37,6 +37,7 @@ const UniversitiesTable: React.FC = () => {
     dispatch(toggleFavorite(name));
   };
 
+  // Render logic for correct output
   if (status === 'idle' && !universities.length) return <></>;
   if (status === 'loading') return <Spinner />;
   if (status === 'error') return <ErrorMessage text={`Error: couldn't send a request 😕`} />;

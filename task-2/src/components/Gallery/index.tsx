@@ -5,8 +5,9 @@ import { RootState } from '../../store';
 import { setImages } from '../../store/imagesSlice';
 import { saveToLS } from '../../utilities/localStorage';
 
-import './gallery.scss';
 import GalleryItem from './GalleryItem';
+
+import './gallery.scss';
 
 type Props = {
   onClickImage: (imgUrl: string) => void;
@@ -16,16 +17,19 @@ const Gallery: React.FC<Props> = ({ onClickImage }) => {
   const dispatch = useDispatch();
   const images = useSelector((state: RootState) => state.images);
 
+  // Pass image url to the modal window
   const handleClick = (e: React.MouseEvent<HTMLImageElement>) => {
     onClickImage(e.currentTarget.src);
   };
 
+  // Delete image from the list
   const onDeleteImage = (id: number) => {
     const newImages = images.filter((item) => item.id !== id);
     dispatch(setImages(newImages));
     saveToLS(newImages);
   };
 
+  // Reset list with initial images data
   const onResetGallery = () => {
     dispatch(setImages(imagesData));
     saveToLS(imagesData);

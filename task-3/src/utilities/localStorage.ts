@@ -6,6 +6,7 @@ type LocalStorageData = {
   favorites: string[];
 };
 
+// Load data from local storage
 export const loadFromLS = (): LocalStorageData => {
   const data = window.localStorage.getItem('universities');
 
@@ -17,10 +18,12 @@ export const loadFromLS = (): LocalStorageData => {
   return { searchValue: '', universities: [], favorites: [] };
 };
 
+// Save data to local storage
 export const saveToLS = (data: LocalStorageData) => {
   window.localStorage.setItem('universities', JSON.stringify(data));
 };
 
+// Clear data in local storage except favorite universities
 export const clearLS = () => {
   const data = loadFromLS();
   window.localStorage.setItem(
