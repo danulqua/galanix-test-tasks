@@ -1,0 +1,78 @@
+@import '../../scss/variables';
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 30px;
+
+  .input-wrapper {
+    position: relative;
+
+    input {
+      padding: 10px 20px;
+      font-size: 16px;
+      outline: none;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      transition: 0.3s all;
+
+      &:hover {
+        border-color: #777;
+      }
+
+      &:focus {
+        border-color: $main-color;
+      }
+    }
+
+    .error {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      color: red;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 5px;
+
+    button {
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ccc;
+
+      &:hover {
+        background-color: lighten(#ccc, 10%);
+      }
+
+      &:active {
+        background-color: lighten(#ccc, 15%);
+      }
+
+      &.submit {
+        background-color: $main-color;
+        color: white;
+
+        &:hover {
+          background-color: lighten($main-color, 10%);
+        }
+
+        &:active {
+          background-color: lighten($main-color, 20%);
+        }
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import './global';
+@import './components';
+
+.app {
+  h1 {
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 700;
+  }
+}
