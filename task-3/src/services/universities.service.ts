@@ -17,7 +17,7 @@ export interface University {
 }
 
 class UniversitiesService {
-  private baseUrl = 'http://universities.hipolabs.com';
+  private baseUrl = 'https://universities.hipolabs.com';
 
   public getUniversitiesByCountry = async (country: string) => {
     // TODO: write logic for error handling

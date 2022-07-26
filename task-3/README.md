@@ -17,7 +17,11 @@ This is my implementation of the third test task for the Galanix Front-end Inter
 - React Hook Form
 - Axios
 
-## How to start the app
+## Deployed app
+
+https://universities-parser-danil0110.vercel.app/
+
+## How to start the app locally
 
 Run following command in terminal:
 

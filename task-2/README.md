@@ -16,7 +16,11 @@ This is my implementation of the second test task for the Galanix Front-end Inte
 - SCSS
 - Redux (Redux Toolkit)
 
-## How to start the app
+## Deployed app
+
+https://gallery-danil0110.vercel.app/
+
+## How to start the app locally
 
 Run following command in terminal:
 
