@@ -1,0 +1,35 @@
+button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+
+  &.red {
+    color: red;
+    border-color: red;
+
+    &:hover {
+      color: white;
+      background-color: red;
+    }
+  }
+
+  &.reset {
+    display: block;
+    margin: 20px auto;
+    border-color: black;
+    color: black;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
