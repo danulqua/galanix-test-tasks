@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  width: 300px;
+  height: 200px;
+}
+
+/* UKRAINE */
+.ukraine {
+  background-color: #f1cb00;
+}
+
+.ukraine .top {
+  background-color: #0056b2;
+  height: 50%;
+}
+
+/* JAPAN */
+.japan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+.japan .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-color: #b40024;
+}
+
+/* ICELAND */
+.iceland {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 25px;
+  background-color: #d11d32;
+}
+
+.iceland div {
+  background-color: #004e94;
+}
+
+.iceland .rec-1 {
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+}
+
+.iceland .rec-2 {
+  border-left: 10px solid white;
+  border-bottom: 10px solid white;
+}
+
+.iceland .rec-3 {
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+}
+
+.iceland .rec-4 {
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+}
+
+/* CZECH */
+.czech {
+  position: relative;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+.czech .top {
+  background-color: #fff;
+  height: 50%;
+}
+
+.czech .bottom {
+  background-color: #cc1518;
+  height: 50%;
+}
+
+.czech .triangle {
+  position: absolute;
+  top: 0;
+
+  /* Trick for creating a triangle using borders */
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #0f4278;
+  border-width: 100px 0 100px 150px;
+}
