@@ -4,9 +4,13 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 30px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    gap: 25px;
+  }
 
   .input-wrapper {
     position: relative;
