@@ -17,7 +17,8 @@ export interface University {
 }
 
 class UniversitiesService {
-  private baseUrl = 'https://universities.hipolabs.com';
+  // This API doesn't support HTTPS, so it works best when you running the application locally
+  private baseUrl = 'http://universities.hipolabs.com';
 
   public getUniversitiesByCountry = async (country: string) => {
     // TODO: write logic for error handling
